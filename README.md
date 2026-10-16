@@ -8,6 +8,14 @@ Full colour scheme and editor ports: [vari-sh.github.io/cremisi](https://vari-sh
 
 ---
 
+## Screenshots
+
+![Cremisi desktop — editor and terminal](Screenshots/Cremisi_desktop_1.png)
+
+![Cremisi desktop — file manager and fastfetch](Screenshots/Cremisi_desktop_2.png)
+
+---
+
 ## The Palette
 
 | Name | Hex | Role |
@@ -31,6 +39,8 @@ Full colour scheme and editor ports: [vari-sh.github.io/cremisi](https://vari-sh
 ---
 
 ## Contents
+
+All configurations live under `Dotfiles/`:
 
 ```
 i3/               Window manager — Cremisi Obsidian theming, keybindings, gaps
@@ -69,7 +79,7 @@ yazi/             File manager — Cremisi Obsidian and Catppuccin Mocha flavour
 
 ```bash
 git clone https://github.com/vari-sh/Cremisi-i3-dotfile
-cd Cremisi-i3-dotfile
+cd Cremisi-i3-dotfile/Dotfiles
 
 # Copy into ~/.config/
 cp -r i3 polybar kitty rofi dunst picom yazi ~/.config/
