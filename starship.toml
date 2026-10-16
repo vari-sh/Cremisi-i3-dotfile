@@ -1,0 +1,178 @@
+# ~/.config/starship.toml  —  palette Cremisi Obsidian
+
+add_newline = true
+
+palette = 'cremisi'
+
+# La struttura del prompt
+# connettori = amethyst (amethyst) · parentesi = sangue (blood) · logo os = ametista (amethyst)
+format = '''
+[╭───](amethyst)[[\[](blood)$os[\]](blood)](lapis)[──](amethyst)[\[](blood)$directory[\]](blood)[\[](blood)$git_branch$git_status$python[\]](blood)
+[╰─](amethyst)$character'''
+
+# La parte destra (Orario)
+right_format = '''[\[](blood)$time[\]](blood)'''
+
+# ─────────────────────────── Moduli ───────────────────────────
+[username]
+show_always = true
+style_user = "fg:amethyst"
+format = '[ $user ]($style)'
+
+[hostname]
+ssh_only = false
+style = "fg:wine bold"
+format = '[|   $hostname]($style)'
+
+[directory]
+style = "fg:tallow"
+format = '[  $path ]($style)'
+truncation_length = 3
+truncation_symbol = "…/"
+
+[python]
+symbol = ""
+style = "fg:malachite"
+format = '[ $symbol ($version) ($virtualenv) ]($style)'
+
+[time]
+disabled = false
+format = '[   $time ](fg:incense)'
+time_format = "%Y-%m-%d %R"
+
+[os]
+disabled = false
+style = "fg:lapis"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "fg:amber"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:amber"
+format = '[($all_status$ahead_behind )]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:ground bg:tallow)]($style)'
+
+[c]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:ground bg:tallow)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:ground bg:tallow)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:ground bg:tallow)]($style)'
+
+[php]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:ground bg:tallow)]($style)'
+
+[java]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:ground bg:tallow)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:ground bg:tallow)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:ground bg:tallow)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:sapphire"
+format = '[[ $symbol( $version) ](fg:ground bg:lapis)]($style)'
+
+[conda]
+symbol = "  "
+style = "fg:ground bg:lapis"
+format = '[$symbol$environment ]($style)'
+ignore_base = false
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:lapis)'
+error_symbol = '[❯](bold fg:blood)'
+vimcmd_symbol = '[❮](bold fg:malachite)'
+vimcmd_replace_one_symbol = '[❮](bold fg:amethyst)'
+vimcmd_replace_symbol = '[❮](bold fg:amethyst)'
+vimcmd_visual_symbol = '[❮](bold fg:amber)'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in [$duration](fg:ground bg:amber) "
+disabled = false
+show_notifications = true
+min_time_to_notify = 45000
+
+# ─────────────────────────── Palette ───────────────────────────
+[palettes.cremisi]
+# superfici
+ground       = "#171a1c"   # crypt stone (sfondo)
+ink          = "#e9e1d1"   # bone (testo, connettori, path)
+iron         = "#9a948c"   # wrought iron (punteggiatura/neutro)
+incense      = "#9e8d99"   # incense (commenti/spenti)
+gutter_fg    = "#4a4e50"
+border       = "#272a2c"
+# accento
+crimson      = "#c42740"   # cremisi pieno
+crimson_deep = "#7e1023"
+blood        = "#e2586a"   # sangue (parentesi, errori)
+# gioielli
+lapis        = "#6886bb"   # funzioni/prompt ok
+tallow       = "#dccb9a"   # sego di candela
+amber        = "#cf9142"   # ambra (git, durata)
+malachite    = "#44a078"   # malachite (python/ok)
+verdigris    = "#6bb3b0"   # verderame (orario)
+amethyst     = "#9c7bb0"   # ametista (os, user)
+wine         = "#b27a90"   # vino (hostname)
+petal        = "#c58f96"   # petalo appassito
+sealwax      = "#c6784c"   # ceralacca

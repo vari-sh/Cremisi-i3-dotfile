@@ -1,0 +1,21 @@
+/* Cremisi Obsidian palette (dark variant of the Cremisi theme) */
+* {
+  ground: #17171c;
+  ink: #e9e1d1;
+  iron: #9a948c;
+  incense: #9e8d99;
+  crimson: #c42740;
+  crimson-deep: #7e1023;
+  blood: #e2586a;
+  lapis: #6886bb;
+  tallow: #dccb9a;
+  amber: #cf9142;
+  malachite: #44a078;
+  verdigris: #6bb3b0;
+  amethyst: #9c7bb0;
+  wine: #b27a90;
+  petal: #c58f96;
+  sealwax: #c6784c;
+  edge: #27272c; /* "border" would clash with the rofi property */
+  gutter-fg: #4a4a50;
+}

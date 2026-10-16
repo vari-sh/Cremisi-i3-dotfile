@@ -1,0 +1,67 @@
+# ~/.config/betterlockscreenrc
+
+# default options
+display_on=0
+span_image=false
+lock_timeout=300
+fx_list=(dim blur dimblur pixel dimpixel color)
+dim_level=40
+blur_level=1
+pixel_scale=10,1000
+solid_color=17171c
+wallpaper_cmd="feh --bg-fill"
+quiet=false
+
+# --- Background and Box ---
+loginbox=17171c66
+loginshadow=00000000
+bgcolor=17171cff
+
+# --- Text and Font ---
+# Shortened text to prevent overlap with the ring
+locktext="Type Password..."
+font="JetBrainsMono Nerd Font"
+timecolor=e9e1d1ff
+time_format="%H:%M:%S"
+greetercolor=e9e1d1ff
+layoutcolor=e9e1d1ff
+
+# --- Normal State (Idle & Typing) ---
+# Ring is a subtle stone grey (border), so the blood highlight is visible
+ringcolor=27272cff
+insidecolor=00000000
+separatorcolor=00000000
+
+# Typing highlight (blood) and Backspace highlight (wine)
+keyhlcolor=e2586aff
+bshlcolor=b27a90ff
+
+# --- Verifying State ---
+# Ring lights up lapis (6886bb) when checking password
+ringvercolor=6886bbff
+insidevercolor=00000000
+veriftext="Verifying..."
+verifcolor=e9e1d1ff
+
+# --- Wrong Password State ---
+# Ring flashes crimson (c42740) on error
+ringwrongcolor=c42740ff
+insidewrongcolor=00000000
+wrongtext="Failure!"
+wrongcolor=e2586aff
+
+# --- Modifiers (e.g., Caps Lock) ---
+# Amber color for caps lock warning
+modifcolor=cf9142ff
+
+
+#
+# expert options (change at own risk!)
+#
+
+# i3lockcolor_bin="i3lock-color"      # Manually set command for i3lock-color
+# suspend_command="systemctl suspend" # Manually change action e.g. hibernate/suspend-command
+
+# i3lock-color - custom arguments
+# lockargs=() 						  # overwriting default "(-n)"
+# lockargs+=(--ignore-empty-password) # appending new argument
