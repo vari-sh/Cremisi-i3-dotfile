@@ -131,7 +131,7 @@ mkdir -p ~/.config/gtk-4.0
 ln -sf ~/.themes/Cremisi-Obsidian/gtk-4.0/{gtk.css,gtk-dark.css,assets} ~/.config/gtk-4.0/
 ```
 
-The theme suggests the **Tela** icon theme (`Tela-dracula-dark` in `index.theme`).
+The theme suggests the **Tela** icon theme (`Tela-circle-black-dark` in `index.theme`).
 
 ### Regenerating the assets
 

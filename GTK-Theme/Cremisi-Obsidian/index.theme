@@ -6,5 +6,5 @@ Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Cremisi-Obsidian
-IconTheme=Tela-dracula-dark
+IconTheme=Tela-circle-black-dark
 ButtonLayout=close,minimize,maximize:menu
