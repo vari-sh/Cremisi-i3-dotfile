@@ -51,7 +51,7 @@ dunst/            Notification daemon
 picom/            Compositor — blur, shadows, rounded corners
 starship.toml     Shell prompt
 betterlockscreen/ Lock screen
-yazi/             File manager — Cremisi Obsidian and Catppuccin Mocha flavours
+yazi/             File manager — Cremisi Obsidian flavour
 ```
 
 ---
