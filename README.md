@@ -55,6 +55,7 @@ yazi/             File manager — Cremisi Obsidian flavour
 ```
 
 The GTK theme lives in `GTK-Theme/Cremisi-Obsidian/` — see [GTK Theme](#gtk-theme).
+The cursor theme lives in `Cursors/Cremisi-Obsidian-Cursors/` — see [Cursor Theme](#cursor-theme).
 
 ---
 
@@ -152,8 +153,73 @@ The stylesheet is derived from [Colloid](https://github.com/vinceliuice/Colloid-
 
 ---
 
+## Cursor Theme
+
+**Cremisi Obsidian Cursors**: an XCursor theme of spearheads, lances and blades, in crypt stone, bone and blood.
+
+- The arrow is a crimson spearhead; the pointer is an upright lance with a bone crossguard.
+- Busy cursors are a rose window whose petals light up in turn.
+- Resize cursors are double-headed lances; edge and corner resizes aim at a bone rampart.
+
+Rendered at 24, 32, 48, 64 and 96 px. Cursors the theme does not draw fall back to Adwaita.
+
+### Installation
+
+```bash
+mkdir -p ~/.local/share/icons
+cp -r Cursors/Cremisi-Obsidian-Cursors ~/.local/share/icons/
+```
+
+Make it the default cursor for X11 in `~/.icons/default/index.theme`:
+
+```ini
+[Icon Theme]
+Inherits=Cremisi-Obsidian-Cursors
+```
+
+and for GTK in `~/.config/gtk-3.0/settings.ini` and `~/.config/gtk-4.0/settings.ini`:
+
+```ini
+gtk-cursor-theme-name=Cremisi-Obsidian-Cursors
+gtk-cursor-theme-size=24
+```
+
+Then restart i3 or log in again.
+
+### LightDM
+
+The greeter does not read your home directory, so install the theme system-wide:
+
+```bash
+sudo cp -r Cursors/Cremisi-Obsidian-Cursors /usr/share/icons/
+```
+
+and set it in `/etc/lightdm/lightdm-gtk-greeter.conf`:
+
+```ini
+[greeter]
+cursor-theme-name=Cremisi-Obsidian-Cursors
+cursor-theme-size=24
+```
+
+`dm-tool switch-to-greeter` shows the greeter without ending your session.
+
+### Regenerating the cursors
+
+Every cursor is drawn as SVG by `src/gen_cursors.py` (Python 3; needs `rsvg-convert` from librsvg and `xcursorgen` from xorg-xcursorgen):
+
+```bash
+cd Cursors/Cremisi-Obsidian-Cursors
+python3 src/gen_cursors.py .
+```
+
+It rewrites `index.theme` and `cursors/`, alias symlinks included. Set `CURSOR_PREVIEW` to an existing directory to also save one SVG per cursor there.
+
+---
+
 ## License
 
 - Dotfiles: [MIT](LICENSE) © vari.sh
 - GTK theme (`GTK-Theme/`): [GPL-3.0](GTK-Theme/Cremisi-Obsidian/LICENSE), as a derivative of Colloid / Catppuccin GTK
+- Cursor theme (`Cursors/`): [MIT](LICENSE) © vari.sh, drawn from scratch
 - yazi flavor: MIT, derived from the yazi-rs Catppuccin Mocha flavor (see its [LICENSE](Dotfiles/yazi/flavors/cremisi-obsidian.yazi/LICENSE))
