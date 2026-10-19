@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Cremisi-Obsidian
+Comment=Cremisi Obsidian: gothic, arcane GTK theme (crypt stone, bone and blood). Derived from Catppuccin GTK (Colloid).
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Cremisi-Obsidian
+IconTheme=Tela-dracula-dark
+ButtonLayout=close,minimize,maximize:menu
