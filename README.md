@@ -155,13 +155,18 @@ The stylesheet is derived from [Colloid](https://github.com/vinceliuice/Colloid-
 
 ## Cursor Theme
 
-**Cremisi Obsidian Cursors**: an XCursor theme of spearheads, lances and blades, in crypt stone, bone and blood.
+**Cremisi Obsidian Cursors**: an XCursor theme of obsidian, bone and blood.
 
-- The arrow is a crimson spearhead; the pointer is an upright lance with a bone crossguard.
-- Busy cursors are a rose window whose petals light up in turn.
-- Resize cursors are double-headed lances; edge and corner resizes aim at a bone rampart.
+![Cremisi Obsidian Cursors](Cursors/Cremisi-Obsidian-Cursors/preview.png)
 
-Rendered at 24, 32, 48, 64 and 96 px. Cursors the theme does not draw fall back to Adwaita.
+- The arrow is an obsidian lozenge cut in four facets, edged in crimson, with a blood stone at its heart.
+- Links and drags are plate gauntlets with lancet fingertips and a crimson cuff.
+- Text, crosshair and resize cursors are polished bone; edge and corner resizes push against a wall or a bracket.
+- Copy, link and help carry cut stones: malachite, lapis and amethyst. The context menu is a folio with a rubricated first line.
+- Busy cursors are a rose window whose lancets light up in turn.
+- `xkill` gets a skull.
+
+Rendered at 24, 28, 32, 36, 40, 48, 56, 64, 72 and 96 px. Each size is drawn again rather than scaled, so outlines keep whole pixels. Cursors the theme does not draw fall back to Adwaita.
 
 ### Installation
 
@@ -206,14 +211,14 @@ cursor-theme-size=24
 
 ### Regenerating the cursors
 
-Every cursor is drawn as SVG by `src/gen_cursors.py` (Python 3; needs `rsvg-convert` from librsvg and `xcursorgen` from xorg-xcursorgen):
+Every cursor is drawn in `src/cursors.py` with the kit in `src/forge.py`; `src/build.py` renders them and writes the Xcursor files itself (Python 3; needs `python-cairo`, and librsvg through `python-gobject`):
 
 ```bash
 cd Cursors/Cremisi-Obsidian-Cursors
-python3 src/gen_cursors.py .
+python3 src/build.py
 ```
 
-It rewrites `index.theme` and `cursors/`, alias symlinks included. Set `CURSOR_PREVIEW` to an existing directory to also save one SVG per cursor there.
+It rewrites `index.theme`, `cursor.theme`, `preview.png` and `cursors/`, alias symlinks included. To look at a design without touching the theme, draw a contact sheet instead: `python3 src/build.py --sheet out.png --size 24 48`.
 
 ---
 
